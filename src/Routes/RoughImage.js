@@ -17,7 +17,7 @@ const RoughImageUpload = async (req, res) => {
   const roughImage = await RoughImage.create({
     rough_image_name,
     rough_image_media_url: file.url,
-    rough_modified_url: file.secure_url,
+    rough_modified_url: "",
   });
   res.status(200).json({ roughImage });
 };
