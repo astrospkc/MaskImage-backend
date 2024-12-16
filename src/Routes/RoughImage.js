@@ -12,6 +12,7 @@ const RoughImageUpload = async (req, res) => {
   }
 
   const file = await uploadOnCLoudinary(localFilePath);
+  console.log("file: ", file);
   console.log("url, secure_url", file.url, file.secure_url);
 
   const roughImage = await RoughImage.create({
